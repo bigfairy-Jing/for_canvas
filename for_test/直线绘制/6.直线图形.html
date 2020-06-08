@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #canvas {
+      border: 1px dashed gray;
+    }
+  </style>
+  <script src="../depend/index.js"></script>
+</head>
+
+<body>
+
+  <canvas id="canvas" width="200" height="200"></canvas>
+  <script>
+    window.onload = () => {
+      let cnv = $id('canvas')
+      let cxt = cnv.getContext('2d');
+      //矩形 ---- 描边举行
+      // cxt.strokeStyle = 属性值
+      // cxt.strokeRect (x,y,width,height)
+      //动笔之前首先知道要画的什么东西，先拿出有颜色的笔,然后画出来
+      cxt.strokeStyle = 'red';
+      cxt.strokeRect(50, 80, 80, 80);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #canvas {
+      border: 1px dashed gray;
+    }
+  </style>
+  <script src="../depend/index.js"></script>
+</head>
+
+<body>
+
+  <canvas id="canvas" width="200" height="200"></canvas>
+  <input type="button" class="btn" value="清空">
+  <script>
+    window.onload = () => {
+      let cnv = $id('canvas')
+      let cxt = cnv.getContext('2d');
+      //矩形 ---- 点击清空矩形
+      cxt.fillStyle = 'HotPink';
+      cxt.moveTo(40, 60);
+      cxt.lineTo(100, 60);
+      cxt.lineTo(100, 30);
+      cxt.lineTo(150, 75);
+      cxt.lineTo(100, 120);
+      cxt.lineTo(100, 90);
+      cxt.lineTo(40, 90);
+      cxt.lineTo(40, 60);
+      cxt.stroke();
+    }
+  </script>
+</body>
+
+</html>

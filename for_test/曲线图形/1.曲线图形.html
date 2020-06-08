@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #canvas {
+      border: 1px dashed gray;
+    }
+  </style>
+  <script src="../depend/index.js"></script>
+</head>
+
+<body>
+
+  <canvas id="canvas" width="200" height="200"></canvas>
+  <input type="button" class="btn" value="清空">
+  <script>
+    window.onload = () => {
+      let cnv = $id('canvas')
+      let cxt = cnv.getContext('2d');
+      cxt.beginPath();
+      // cxt.arc(x,y,半径,开始角度,结束角度,anticlockwise)//是否是逆时针
+      // 默认情况下canvas是按照逆时针旋转方式
+      cxt.arc(80, 80, 50, 0, 180 * Math.PI / 180, true);
+      cxt.closePath();
+      cxt.strokeStyle = 'red';
+      cxt.stroke();
+      //整圆
+      cxt.beginPath();
+      cxt.arc(120, 80, 50, 0, 360 * Math.PI / 180, true);
+      cxt.closePath();
+      //描边
+      cxt.strokeStyle = 'HotPink';
+      cxt.stroke();
+    }
+  </script>
+</body>
+
+</html>
